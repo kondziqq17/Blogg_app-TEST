@@ -16,7 +16,7 @@ require 'support/macros'
 	  			login_user @john
 	  			article = Article.create(title: "first article", body: "body of first article", user: @john)
 
-	  			get :edit, :id article
+	  			get :edit, id: article
 	  			expect(response).to render_template :edit
 	  		end
 	  	end
